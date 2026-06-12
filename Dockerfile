@@ -1,4 +1,4 @@
-FROM nginx:stable
+FROM nginx:alphine
 
 COPY ./template/. /usr/share/nginx/html/.
 
