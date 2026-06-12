@@ -1,7 +1,7 @@
-FROM httpd:2-alpine
+FROM nginx:latest
 
-COPY template/ /usr/local/apache2/htdocs/
+COPY ./template /usr/share/nginx/html
 
 EXPOSE 80
 
-CMD ["httpd", "-D", "FOREGROUND"]
+CMD ["nginx", "-g", "daemon off;"]
