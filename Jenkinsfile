@@ -5,7 +5,7 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = 'web-app'
+        IMAGE_NAME = 'game-webapp'
         CONTAINER_NAME = 'gameover'
         }
     
@@ -32,7 +32,7 @@ pipeline {
         
     stage('Run') { 
         steps {
-        sh '''docker run -d ${IMAGE_NAME} -p 80:80 --name ${CONTAINER_NAME}
+        sh '''docker run -d --name ${CONTAINER_NAME} -p 80:80 ${IMAGE_NAME}:latest
         docker ps'''
         }
     }
