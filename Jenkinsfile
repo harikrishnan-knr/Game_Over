@@ -5,7 +5,7 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = 'gameover-web'
+        IMAGE_NAME = 'web-app'
         CONTAINER_NAME = 'gameover'
         }
     
